@@ -24,7 +24,7 @@ class Block { //container to multiple transaction
     ) {}
 
     get hash(){
-        const str = JSON.stringify(this.hash);
+        const str = JSON.stringify(this);
         const hash = crypto.createHash('SHA256')
         hash.update(str).end();
         return hash.digest('hex');

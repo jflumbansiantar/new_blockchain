@@ -40,7 +40,7 @@ class Block {
         this.nonce = Math.round(Math.random() * 99999999999);
     }
     get hash() {
-        const str = JSON.stringify(this.hash);
+        const str = JSON.stringify(this);
         const hash = crypto.createHash('SHA256');
         hash.update(str).end();
         return hash.digest('hex');
